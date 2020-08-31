@@ -25,19 +25,27 @@ Loop Read, list.csv
   try
   {
     Send .
-    Send %new1%%
+    Sleep 500
+    Send %new1%
+    Sleep 500
     Send {Enter}
-    Sleep 200
+    Sleep 3000
     WinGetActiveTitle, Title
-    if (RegExMatch(Title, %new1%) == 0) {
+    if (InStr(Title, record_num) == 0) {
 	    throw Exception("Fail", -1)
     }
     Send ^i
+    Sleep 500
     Send b
+    Sleep 500
     Send %new2%
+    Sleep 500
+    Send {Enter}
+    Sleep 500
     Send ^s
-    Sleep 200
-    Send {Escape}
+    Sleep 500
+    Send !q
+    Sleep 500
   }
 catch e
   {
@@ -45,5 +53,8 @@ catch e
     ExitApp
   }
 }
+
 MsgBox, All Done!  
+Escape::
+ExitApp
 return
