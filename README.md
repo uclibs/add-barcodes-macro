@@ -5,6 +5,8 @@
 ### Setup:
 1. Prepare a csv (comma-separated) file with two columns: record-number and barcode, in the macro folder.
   - *file must be named "list.csv"*
+1. Sierra must be in single-window mode (Admin > Settings > Windows)
+1. If the keystrokes are not registering or in case of any errors, try running but the script and Sierra in admin mode (right-click, Run as Admin)
 
 ### In Sierra:
 1. Start and login to Sierra.
