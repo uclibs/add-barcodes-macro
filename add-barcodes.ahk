@@ -45,7 +45,7 @@ Loop Read, list.csv
     Send ^s
     Sleep 500
     Send !q
-    Sleep 500
+    Sleep 700
   }
 catch e
   {
